@@ -1,8 +1,12 @@
+"use client"
+
+import { useSearchParams } from "next/navigation"
 import React from 'react'
 
-const Search = ({ params }) => {
+const Search = () => {
+  const searchParams = useSearchParams()
   return (
-    <div>Search</div>
+    <main>Search: {searchParams.get('query')}</main>
   )
 }
 
